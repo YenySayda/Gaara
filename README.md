@@ -1,4 +1,4 @@
-CARÁTULA
+***CARÁTULA
 
 *curso:
 
@@ -14,31 +14,31 @@ CARÁTULA
 
 
 
-NOMBRE DEL PRODUCTO:  Gaara
+***NOMBRE DEL PRODUCTO:  Gaara
 
 
 
 
-VISION DEL PRODUCTO
+***VISION DEL PRODUCTO***
 ser reconocidos como la mejor página web informativa y segura para la registro, 
 adopción, y esterilización de mascotas.
 
 
 
-PÚBLICO OBJETIVO
+***PÚBLICO OBJETIVO***
 Dirigido, para las personas que tengan mascotas o que deseen adoptar y 
 dar en adopción mascotas en la ciudad de Lima.
 
 
 
-PROPUESTA DE VALOR
+***PROPUESTA DE VALOR***
 -Brindar un servicio eficaz y activo a los usuarios.
 
 -Manejar la veracidad de la información de datos de las mascotas.
 
 
 
-PRINCIPALES FUNCIONALIDADES:
+***PRINCIPALES FUNCIONALIDADES:***
 
 -Reporte de mascotas sin hogar: en este espacio el usuario podrá ingresar  la información de las mascotas sin hogar (peso, edad aproximada, nombre, sexo, tamaño, raza, tipo de pelo, nivel de actividad) mediante un formulario al igual también completará sus datos personales la persona que suba dicha información(nombres, apellidos, sexo, teléfono, correo, lugar)para que éste sea contactado por quien desee adoptar.
 
