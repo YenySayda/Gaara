@@ -1,4 +1,4 @@
-***CARÁTULA
+***CARÁTULA***
 
 *curso:
 
