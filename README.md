@@ -51,4 +51,6 @@ dar en adopción mascotas en la ciudad de Lima.
 -Esterilización de animales: este espacio son para las personas que tengan animales a los cuales deseen esterilizar. para ello se completará un pequeño formulario donde indique:
 el lugar (distrito) y tipo de animal, luego ser dirigido a la información de las veterinarias existentes en dicho distrito, brindando así: dirección, teléfono, hora de atención.
 
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
 
