@@ -1,3 +1,4 @@
+
 .menu{
 
     background: url(logos1.png);
@@ -8,7 +9,7 @@
     display: flex;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
-/*background-attachment: fixed and acroll*/
+    /*background-attachment:fixed and acroll*/
 }
 .subm{
     margin-top: 165px;
@@ -41,4 +42,44 @@
 
 .subm ul li:hover{ /*color para el link una vez que pase el cursor por cada elemnto*/
     background-color: #2682D2;
+}
+
+/*+++++++++++++++++*/
+.c1, .c2{
+height: 500px;
+display: flex;
+border: solid blue 1px;
+justify-content: space-between;
+margin: 10px 0;
+background-color: #2682D2;
+
+}
+
+.subc1, .subc2, .subc3{
+    margin: 3px;
+    background-color: whitesmoke;
+}
+
+.subc1{
+    border: solid red 1px;
+    /*display: inline-flex;*/
+    flex-grow: 5;
+
+}
+.subc2{
+    flex-grow: 16;
+    border: solid red 1px;
+
+}
+.subc3{
+    flex-grow:1;
+    border: solid red 1px;
+
+}
+
+/*++++++++++*/
+
+body{
+    background-color: black;
+
 }
