@@ -25,11 +25,7 @@ $distrito = $_POST["distrito"];
 $pdo = new PDO("mysql: host=localhost;dbname=prueba;charset=utf8", "root", "");
 
 $pdo->query("INSERT INTO registro VALUES (NULL,'$nombre' , '$raza' , '$sexom', '$actividad' , '$edad' , '$tam' , '$destino' , '$nombrep' , '$apellidosp' , '$correo' , '$telefono' , '$distrito')");
- /*if($pdo){
-    $nomp = $_POST["nombrep"];
-    $apelp = $_POST["apellidosp"];
-    echo 'estimad@'. $nomp .'   ' . $apelp. '   su reporte se  registró satisfactoriamente';
- }*/
+
 
 header("Location: reportar.php");
 ?>

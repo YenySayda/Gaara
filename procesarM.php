@@ -1,6 +1,6 @@
 <?php
 
-$id=$_REQUEST['id'];
+$id=$_POST['id'];
 $nombre = $_POST["nombrem"];
 $raza = $_POST["raza"];
 $sexom = $_POST["sexom"];

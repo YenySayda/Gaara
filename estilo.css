@@ -154,7 +154,7 @@ footer{
     
     max-width: 650px;
     margin: auto;
-    background: #6C29DF;
+    background: white;
     border-radius: 7px;
     border: solid blue 1px; 
     font-size: 20px;
@@ -174,7 +174,6 @@ h1{
 
 .input50{
     width: 44%;
-
 }
 
 .input25{
@@ -211,6 +210,7 @@ input, select{
         padding: 10px 40px;
         cursor: pointer;
         margin-left: 40%;
+        
 }
 .bot:active{
         transform:scale(1.05)
@@ -218,11 +218,5 @@ input, select{
 
 
 /*+++++++++++++++*/
-.formBuscar{
-    margin:auto;
-    width: 55%;
-}
 
-.buscar{
-    width:85%;
-}
+

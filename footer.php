@@ -13,7 +13,7 @@
                 <div class="hijoinf">
                         <p><strong>IDIOMA:</strong> <?php echo $idioma ?></p>
                         <p><strong>DISTRITO:</strong> <?php echo $distrito; ?><br><br>
-                        <div class="a1"><button type="submit" style="background-color:white; height:25px; "><a href="idiomaDist.php" style="text-decoration:none; color:blue;"><strong>CAMBIAR</strong> </a></button></div>  
+                        <div><button type="submit" style="background-color:white; height:25px; "><a href="idiomaDist.php" style="text-decoration:none; color:blue;"><strong>CAMBIAR</strong> </a></button></div>  
                 </div>
         </div>
         

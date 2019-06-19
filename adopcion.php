@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 $pdo = new PDO("mysql:host=localhost;dbname=prueba;charset=utf8", "root", "");
 
 ?>
@@ -176,6 +176,52 @@ else{
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="estilo.css">
+    <style>
+        .divA{
+            display: flex; 
+            border: red 5px dotted; 
+            width: 500px; 
+            margin:auto;
+        }
+        .divB, .divAB {
+            background-color: #000;
+           /* width:240px;*/
+            flex-grow: 1;
+            
+            
+        }
+
+        .divB{
+            padding: 2px 5px;
+            color: white;
+           
+        }
+        .bot1, .bot2{
+            background: crimson;
+            color:#fff;
+            cursor: pointer;
+        }
+
+        .botDD1, .botDD2{
+         
+            margin:auto;
+        }
+        .botDD{
+            width:320px;
+            display:  flex;
+            /*border: solid green 2px;*/
+        }
+
+        .bot1{
+            padding: 10px 30px;
+        }
+        .bot2{
+            padding: 10px 20px;
+        }
+        .bot1, .bot2:active{
+            transform:scale(1.05)
+        }
+    </style>
  
 </head>
 <body class="general">
@@ -184,25 +230,42 @@ else{
 
 <h1>MASCOTAS EN ADOPCIÓN</h1>
 <?php foreach ($pdo->query("SELECT * FROM registro ORDER BY ID DESC") as $respuesta){?>
-    <div class="contenedor" style="display: flex; border: red 5px dotted; width: 500px; margin:auto;">
-   
-        <img src="<?php echo $respuesta["foto"] ?>" alt="" width="320px" height="280px" style="">
-        
-        <div style="border: solid blue 1px; width:240px">
 
-        <p style="font-size:12px;"><?php echo 'Nombre:  '.$respuesta["nombre"] ?></p>
-        <p style="font-size:12px;"><?php echo 'Raza:  '.$respuesta["raza"] ?></p>
-        <p style="font-size:12px;"><?php echo 'Sexo:  '.$respuesta["sexom"] ?></p>
-        <p style="font-size:12px;"><?php echo 'Actividad:  '.$respuesta["actividad"] ?></p>
-        <p style="font-size:12px;"><?php echo 'Edad:  '.$respuesta["edad"].'meses' ?></p>
-        <p style="font-size:12px;"><?php echo 'Tamaño:  '.$respuesta["tam"].'cm' ?></p>
-        <p style="font-size:12px;"><?php echo 'Contactos:  '.$respuesta["nombrep"].'   '.$respuesta["apellidosp"]?></p>
-        <p style="font-size:12px;"><?php echo 'correo:  '.$respuesta["correo"] ?></p>
-        <p style="font-size:12px;"><?php echo 'telefono:  '.$respuesta["telefono"].'distrito:'.$respuesta["distrito"] ?></p>
-        <a href="modificar.php?id=<?php echo $respuesta["id"] ?>">MODIFICAR</a><br>
-        <a href="eliminar.php?id=<?php echo $respuesta["id"] ?>">BORRAR</a>   
+    <div  class="divA">
+        <div class="divAB">
+            <img src="<?php echo $respuesta["foto"] ?>" alt="" width="320px" height="280px" style="">
+            <div class="botDD">
+                <div class="botDD1">         
+                    <form action="borrar.php" method="post">
+                        <input type="hidden" name="id" value="<?php echo $respuesta["id"] ?>">
+                        <button type="submit" class="bot1">Borrar</button>
+                    </form>
+                </div>
+                <div class="botDD2">
+                    <form action="modificar.php?id=<?php echo $respuesta["id"] ?>" method="post">
+                        <input type="hidden" name="id" value="<?php echo $respuesta["id"] ?>">
+                        <button type="submit" class="bot2">Modificar</button>
+                        <strong></strong>
+                    </form> 
+                </div> 
+            </div>
+        </div>
+        <div class="divB">
+
+            <p style="font-size:12px;"><?php echo '<strong>Nombre  :</strong>  '.$respuesta["nombre"] ?></p>
+            <p style="font-size:12px;"><?php echo '<strong>Raza:  </strong>'.$respuesta["raza"] ?></p>
+            <p style="font-size:12px;"><?php echo '<strong>Sexo:  </strong>'.$respuesta["sexom"] ?></p>
+            <p style="font-size:12px;"><?php echo '<strong>Actividad:  </strong>'.$respuesta["actividad"] ?></p>
+            <p style="font-size:12px;"><?php echo '<strong>Edad:  </strong>'.$respuesta["edad"].'meses' ?></p>
+            <p style="font-size:12px;"><?php echo '<strong>Tamaño:  </strong>'.$respuesta["tam"].'cm' ?></p>
+            <p style="font-size:12px;"><?php echo '<strong>Contactos:  </strong>'.$respuesta["nombrep"].'   '.$respuesta["apellidosp"]?></p>
+            <p style="font-size:12px;"><?php echo '<strong>correo:  </strong>'.$respuesta["correo"] ?></p>
+            <p style="font-size:12px;"><?php echo '<strong>telefono:  </strong>'.$respuesta["telefono"]?></p>
+            <p style="font-size:12px;"><?php echo '<strong>distrito: </strong>'.$respuesta["distrito"] ?></p>
+
+        
   
-    </div>
+        </div>
     </div>
 
  

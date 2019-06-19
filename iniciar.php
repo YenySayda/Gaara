@@ -1,5 +1,7 @@
 <?php
 session_start();
+?>
+<?php
 if(isset($_COOKIE["distrito"])){
     $distrito = $_COOKIE["distrito"]; #leer el valor
     switch ($distrito){  
@@ -164,7 +166,6 @@ else{
     exit;
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -178,43 +179,24 @@ else{
 <body class="general">
     <header><?php include 'header.php' ?></header>
 
+        <h1>Iniciar Sesión</h1>
+
+        <?php if (isset($_GET["error"])) { ?>
+            <p style="color: red; text-align: center;"><strong>intente de nuevo</strong> </p>
+        <?php }  ?>
+
+        <form action="procesarI.php" method="post" style="margin:auto; width:500px">
+             <div>
+                <input type="email" name="correo" placeholder="Correo" class="input100" required>
+            </div>
+            <div>
+                <input type="password" name="password" placeholder="Contraseña" class="input100" required>
+            </div>
+            <button type="submit" class="bot">ENTRAR</button>
+
+        </form>
     
-<h1 class="tit">¡GAARA LE DA LA BIENVENIDA!</h1>
-<h1 class="tit">FOTOS</h1><br><br>
-    <div class="padreU">
-        
-        <div class="hijoU">
-            <img src="imagenes/mascota1.jpg" alt="">
-        </div>
-        <div class="hijoU">
-            <img src="imagenes/mascota2.jpg" alt="">
-        </div>
-        <div class="hijoU">
-            <img src="imagenes/mascota3.jpg" alt="">
-        </div>
-        <div class="hijoU">
-            <img src="imagenes/mascota4.jpg" alt="">
-        </div>
-    </div><br><br>
-    <div class="padreU">
-        <div class="hijoU">
-            <img src="imagenes/mascota5.jpg" alt="">
-        </div>
-        <div class="hijoU">
-            <img src="imagenes/mascota6.jpg" alt="">
-        </div>
-        <div class="hijoU">
-            <img src="imagenes/mascota7.jpg" alt="">
-        </div>
-        <div class="hijoU">
-            <img src="imagenes/mascota8.jpg" alt="">
-        </div>
-    </div>
-
-
-<footer><?php include 'footer.php' ?></footer>
-    
-
+    <footer><?php include 'footer.php' ?></footer>
     
 </body>
 </html>

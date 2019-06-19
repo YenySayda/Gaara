@@ -1,5 +1,5 @@
 <?php
-$id=$_GET["id"];
+$id=$_POST["id"];
 $pdo = new PDO("mysql:host=localhost;dbname=prueba;charset=utf8", "root", "");
 $resultado2 = $pdo->query("SELECT * FROM registro WHERE id ='$id'");
 $reporte= $resultado2->fetch();

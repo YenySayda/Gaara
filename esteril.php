@@ -1,4 +1,5 @@
 <?php
+session_start();
 if(isset($_COOKIE["distrito"])){
     $distrito = $_COOKIE["distrito"]; #leer el valor
     switch ($distrito){  
@@ -14,7 +15,6 @@ if(isset($_COOKIE["distrito"])){
         case "BR":
         $distrito = "BREÑA";
             break;
-
         case "CA":
         $distrito = "CARABAYLLO";
             break;
@@ -24,7 +24,6 @@ if(isset($_COOKIE["distrito"])){
         case "CHO":
         $distrito = "CHORRILLOS";
             break;
-
         case "CI":
         $distrito = "CIENEGUILLA";
             break;
@@ -141,7 +140,6 @@ if(isset($_COOKIE["distrito"])){
             break;
     }
 }
-
 if(isset($_COOKIE["idioma"])){
     $idioma = $_COOKIE["idioma"];
     switch ($idioma){  
@@ -157,7 +155,6 @@ if(isset($_COOKIE["idioma"])){
         break;
     }
 }
-
 else{
     header("Location: idiomaDist.php");
     exit;
@@ -172,6 +169,16 @@ else{
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="estilo.css">
+    <style>
+    .formBuscar{
+    margin:auto;
+    width: 55%;
+
+}
+
+.buscar{
+    width:90%;
+}</style>
   
 </head>
 <body class="general">
@@ -181,7 +188,7 @@ else{
     <h1>BUSCAR</h1>
     <form action="procEst.php" method="get" class="formBuscar" >
         <input type="text" name="buscar" id="" placeholder="Buscar en Gaara" class="buscar">
-        <input type="submit" value="Buscar">
+        <input type="submit" value="Buscar" class="bot">
     
     
     </form>

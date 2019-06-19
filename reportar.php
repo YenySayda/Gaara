@@ -1,5 +1,6 @@
 
 <?php
+session_start();
 if(isset($_COOKIE["distrito"])){
     $distrito = $_COOKIE["distrito"]; #leer el valor
     switch ($distrito){  
@@ -164,8 +165,6 @@ else{
     exit;
 }
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">

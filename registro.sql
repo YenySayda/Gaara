@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-06-2019 a las 16:11:56
+-- Tiempo de generación: 19-06-2019 a las 16:12:43
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 5.6.37
 
@@ -49,10 +49,7 @@ CREATE TABLE `registro` (
 --
 
 INSERT INTO `registro` (`id`, `nombre`, `raza`, `sexom`, `actividad`, `edad`, `tam`, `foto`, `nombrep`, `apellidosp`, `correo`, `telefono`, `distrito`) VALUES
-(17, 'purina', 'pastor aleman', 'hembra', 'muyAct', 5, 30, 'imagenes/images (10).jpg', 'jorge', 'farfan', 'jorge@g.com', 458554, 'AT'),
-(18, 'peque', 'borzoi', 'hembra', 'poco', 12, 30, 'imagenes/images (8).jpg', 'jose', 'huaman', 'jose@h.com', 47855454, 'MS'),
-(19, 'sam', 'boston', 'hembra', 'nada', 15, 45, 'imagenes/images (2).jpg', 'luis', 'anco', 'luis@h.com', 48527889, 'MI'),
-(20, 'kam', 'boston', 'hembra', 'activo', 15, 45, 'imagenes/5c12c823b879c.jpeg', 'luis', 'anco', 'luis@h.com', 48527889, 'BA');
+(17, 'purina', 'pastor aleman', 'hembra', 'muyAct', 5, 30, 'imagenes/images (10).jpg', 'jorge', 'farfan', 'jorge@g.com', 458554, 'AT');
 
 --
 -- Índices para tablas volcadas
@@ -72,7 +69,7 @@ ALTER TABLE `registro`
 -- AUTO_INCREMENT de la tabla `registro`
 --
 ALTER TABLE `registro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

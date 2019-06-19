@@ -1,5 +1,9 @@
 <?php
-session_start();
+$pdo = new PDO("mysql:host=localhost;dbname=prueba;charset=utf8", "root", "");
+$dat = $pdo->query("SELECT * FROM crearcuenta");
+$cuenta = $dat->fetchALL();
+?>
+<?php
 if(isset($_COOKIE["distrito"])){
     $distrito = $_COOKIE["distrito"]; #leer el valor
     switch ($distrito){  
@@ -178,43 +182,31 @@ else{
 <body class="general">
     <header><?php include 'header.php' ?></header>
 
-    
-<h1 class="tit">¡GAARA LE DA LA BIENVENIDA!</h1>
-<h1 class="tit">FOTOS</h1><br><br>
-    <div class="padreU">
-        
-        <div class="hijoU">
-            <img src="imagenes/mascota1.jpg" alt="">
+    <h1>CREAR CUENTA</h1>
+    <?php if(isset($_GET["error1"])) { ?>
+        <p style= "color:red ;"><strong>Las Contraseñas no coinciden</strong> </p>
+    <?php } ?>
+    <form action="procesarC.php" method="post" style="margin:auto; width:500px">
+        <div>
+        <input type="text" name="nombres" placeholder="Nombres" class="input100" required>
         </div>
-        <div class="hijoU">
-            <img src="imagenes/mascota2.jpg" alt="">
+        <div>
+        <input type="text" name="apellidos" placeholder="Apellidos" class="input100" required>
         </div>
-        <div class="hijoU">
-            <img src="imagenes/mascota3.jpg" alt="">
+        <div>
+        <input type="email" name="correo" placeholder="Correo" class="input100" required>
         </div>
-        <div class="hijoU">
-            <img src="imagenes/mascota4.jpg" alt="">
+        <div>
+        <input type="password" name="password1" placeholder="Contraseña" class="input100" required>
         </div>
-    </div><br><br>
-    <div class="padreU">
-        <div class="hijoU">
-            <img src="imagenes/mascota5.jpg" alt="">
+        <div>
+        <input type="password" name="password2" placeholder="Confirmar contraseña" class="input100" required>
         </div>
-        <div class="hijoU">
-            <img src="imagenes/mascota6.jpg" alt="">
-        </div>
-        <div class="hijoU">
-            <img src="imagenes/mascota7.jpg" alt="">
-        </div>
-        <div class="hijoU">
-            <img src="imagenes/mascota8.jpg" alt="">
-        </div>
-    </div>
+        <button type="submit" class="bot">Registrar</button>
 
+    </form>
 
-<footer><?php include 'footer.php' ?></footer>
-    
+    <footer><?php include 'footer.php' ?></footer>
 
-    
 </body>
 </html>
